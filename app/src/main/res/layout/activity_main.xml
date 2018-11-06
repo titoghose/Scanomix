@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/profileImg"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"
+        android:padding="10dp"
+        android:background="#ffffff"
+        android:text="\nSTATUS"
+        android:textSize="10pt"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/nameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NAME"
+        android:textSize="9pt"
+        android:textAlignment="center"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/profileImg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/hrLabel"
+        android:paddingTop="20dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Photoplethysmogram"
+        app:layout_constraintTop_toBottomOf="@id/nameTV"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/liveHR"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/hrLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/rrLabel"
+        android:paddingTop="20dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Respiration Graph"
+        app:layout_constraintTop_toBottomOf="@id/liveHR"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/liveRR"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/rrLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/connectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/liveRR"
+        android:text="Connect"/>
+
+    <Button
+        android:id="@+id/triageBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go To Triage"
+        app:layout_constraintTop_toBottomOf="@id/connectBtn"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display Data"
+        android:id="@+id/data"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/liveRR"/>
+</android.support.constraint.ConstraintLayout>

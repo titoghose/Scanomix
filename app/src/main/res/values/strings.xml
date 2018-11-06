@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">StanfordHealthPP</string>
+    <string name="title_activity_triage_maps">Map</string>
+</resources>
